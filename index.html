@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>Credit</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="vendors/linericon/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+<body>
+        
+	
+	
+	<!--================ Home Banner Area =================-->
+	<section class="home_banner_area">
+		<div class="banner_inner">
+			<div class="container">
+				<div class="banner_content">
+					<p class="upper_text"></p>
+					<h2>Giving To Charity</h2>
+					<p>
+						Make your future better with a smart step.
+					</p>
+					<a class="primary_btn mr-20 bg-danger"onclick="onButtonClick()">Pay Here</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Home Banner Area =================-->
+
+	<!--================ Start footer Area  =================-->	
+	<footer>
+		<div class="footer-area">
+			<div class="container">
+				<div class="row section_gap">
+					<div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+						<div class="single-footer-widget tp_widgets">
+							<h4 class="footer_title">Contact Us</h4>
+							<div class="ml-40">
+	
+	
+								<p class="sm-head">
+									<span class="fa fa-envelope"></span>
+									Email
+								</p>
+								<p>
+									mvmvijya@gmail.com <br>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<script src="js/countdown.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+	    <script src="https://js.instamojo.com/v1/checkout.js"></script>
+    <script>
+      /* Start client-defined Callback Handler Functions */
+      function onOpenHandler () {
+        alert('Payments Modal is Opened');
+      }
+
+      function onCloseHandler () {
+        alert('Payments Modal is Closed');
+      }
+
+      function onPaymentSuccessHandler (response) {
+        alert('Payment Success');
+        console.log('Payment Success Response', response);
+      }
+
+      function onPaymentFailureHandler (response) {
+        alert('Payment Failure');
+        console.log('Payment Failure Response', response);
+      }
+      /* End client-defined Callback Handler Functions */
+
+      /* Configuring Handlers */
+      Instamojo.configure({
+        handlers: {
+          onOpen: onOpenHandler,
+          onClose: onCloseHandler,
+          onSuccess: onPaymentSuccessHandler,
+          onFailure: onPaymentFailureHandler
+        }
+      });
+      
+      function onButtonClick() {
+        Instamojo.open('http://www.instamojo.com/@ayushya');
+      }
+
+      window.onbeforeunload = function () {
+        return 'Are you sure you want to leave?';
+     }
+    </script>
+    </footer>
+</body>
+</html>
